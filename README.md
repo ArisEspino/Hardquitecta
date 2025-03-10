@@ -1,16 +1,17 @@
-# flutter_web
+# Hardquitecta
 
-A new Flutter project.
+# Arquitectura de Máquinas - Página Web Educativa
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+Este repositorio contiene el código y los recursos para una página web informativa y dinámica sobre **Arquitectura de Máquinas**. La página se actualiza periódicamente con contenido visto en clases, proporcionando explicaciones teóricas, ejemplos prácticos y recursos interactivos para estudiantes y profesionales.
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🚀 **Características Principales**
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Contenido Dinámico:** Añadimos nuevos temas semanalmente, siguiendo el ritmo de las clases.
+- **Recursos Visuales:** Diagramas interactivos, animaciones y simuladores para entender conceptos complejos.
+- **Ejercicios Prácticos:** Ejercicios resueltos paso a paso y actividades para practicar.
+- **Foro de Discusión:** Un espacio para preguntas, respuestas y colaboración entre usuarios.
+
+---
