@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_web/constant/nav_items.dart';
 import 'package:flutter_web/styles/styles.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HeaderDesktop extends StatelessWidget {
+
+
+  const HeaderDesktop({super.key});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,9 +26,9 @@ class HeaderDesktop extends StatelessWidget {
                 onPressed: () {},
                 child: Text(
                   navTitles[i],
-                  style: TextStyle(
+                  style: GoogleFonts.montserratAlternates(
                     fontSize: 16,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.bold,
                     color: Colors.black,
                   ),
                 ),
@@ -47,7 +51,10 @@ class SiteLogo extends StatelessWidget {
       onTap: () {},
       child: Text(
         'Hardquitecta',
-        style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+        style: GoogleFonts.montserratAlternates(
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+        ),
       ),
     );
   }

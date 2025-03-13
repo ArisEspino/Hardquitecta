@@ -1,23 +1,41 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter_web/ui/buttons/drawer_mobile.dart';
 import 'package:flutter_web/ui/buttons/header_desktop.dart';
+import 'package:flutter_web/ui/buttons/header_mobile.dart';
 import 'package:flutter_web/ui/view/about_view.dart';
 import 'package:flutter_web/ui/view/home_view.dart';
 
-class Layout extends StatelessWidget {
+class Layout extends StatefulWidget {
   final Widget child;
 
   const Layout({super.key, required this.child});
 
   @override
+  State<Layout> createState() => _LayoutState();
+}
+
+class _LayoutState extends State<Layout> {
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+  @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Scaffold(
+      key: scaffoldKey,
+      endDrawer: size.width >= 1000 ? null : SideBarMobile(),
       body: Container(
         decoration: BoxDecoration(),
         child: Stack(
           children: [
             _HomeBody(),
-           HeaderDesktop()
+            //Desktop
+            (size.width >= 1000)
+                ? HeaderDesktop()
+                : HeaderMobile(
+                  onLogoTap: () {},
+                  onMenuTap: () {
+                    scaffoldKey.currentState?.openEndDrawer();
+                  },
+                ),
           ],
         ),
       ),
