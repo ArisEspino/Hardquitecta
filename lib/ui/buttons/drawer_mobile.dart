@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web/constant/nav_items.dart';
 
 class SideBarMobile extends StatelessWidget {
+  final GlobalKey<ScaffoldState> scaffoldKey;
+
+  const SideBarMobile({super.key, required this.scaffoldKey});
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -14,7 +18,7 @@ class SideBarMobile extends StatelessWidget {
               padding: EdgeInsets.only(left: 20, top: 20, bottom: 20),
               child: IconButton(
                 onPressed: () {
-                  Navigator.of(context).pop(); //metodo for close sideBar
+                 scaffoldKey.currentState?.closeEndDrawer();
                 },
                 icon: const Icon(Icons.close),
               ),

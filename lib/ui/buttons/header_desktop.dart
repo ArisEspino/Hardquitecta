@@ -5,8 +5,6 @@ import 'package:flutter_web/styles/styles.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HeaderDesktop extends StatelessWidget {
-
-
   const HeaderDesktop({super.key});
   @override
   Widget build(BuildContext context) {
@@ -18,6 +16,7 @@ class HeaderDesktop extends StatelessWidget {
       child: Row(
         children: [
           SiteLogo(onTap: () {}),
+
           const Spacer(),
           for (int i = 0; i < navTitles.length; i++)
             Padding(
@@ -34,6 +33,7 @@ class HeaderDesktop extends StatelessWidget {
                 ),
               ),
             ),
+          const Spacer(),
         ],
       ),
     );
@@ -47,13 +47,21 @@ class SiteLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {},
-      child: Text(
-        'Hardquitecta',
-        style: GoogleFonts.montserratAlternates(
-          fontSize: 20,
-          fontWeight: FontWeight.bold,
+    return Padding(
+      padding: const EdgeInsets.only(left: 20),
+      child: MouseRegion(
+        cursor: SystemMouseCursors.click,
+        child: GestureDetector(
+          onTap: () {
+            print('object');
+          },
+          child: Text(
+            'Hardquitecta',
+            style: GoogleFonts.montserratAlternates(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ),
       ),
     );
